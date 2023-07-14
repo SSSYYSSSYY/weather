@@ -1,1 +1,53 @@
-/*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(222, 237, 237);
+}
+
+.container {
+  background: url("./資產 1.svg") no-repeat center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+.container .left-block, .container .right-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5rem;
+}
+
+.weather-card {
+  background-color: white;
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 1px 3px 4px #999;
+  color: rgb(29, 49, 80);
+}
+.weather-card .text-title {
+  display: flex;
+}
+.weather-card .text-title h3 {
+  font-size: 25px;
+}
+.weather-card .text-title span {
+  font-size: 14px;
+  align-self: center;
+  margin-left: 0.5rem;
+}
+.weather-card .text-area {
+  margin-right: 2rem;
+}
+.weather-card .icon-area {
+  font-size: 40px;
+  padding-top: 0.5rem;
+}/*# sourceMappingURL=main.css.map */
