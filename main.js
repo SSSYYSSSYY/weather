@@ -81,3 +81,7 @@ times.addEventListener("change", (e) => {
 晴午後短暫雷陣雨 <i class="fa-solid fa-cloud-sun-rain"></i>
 
 */
+
+
+//自己多串各縣市未來一週天氣預報的API
+
