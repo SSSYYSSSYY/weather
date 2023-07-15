@@ -100,10 +100,10 @@ weatherCards.forEach((card, index) =>{
         console.log("降雨機率為"+PoPArr[index]);
         console.log("舒適度為"+CIArr[index]);
     });
-    // card.addEventListener("mouseleave", (e) =>{
-    //     const info = document.querySelector(".info-card");
-    //     card.removeChild(info);
-    // });
+    card.addEventListener("mouseleave", (e) =>{
+        const info = document.querySelector(".info-card");
+        card.removeChild(info);
+    });
 });
 
 /*parameterName種類：

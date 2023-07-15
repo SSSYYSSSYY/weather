@@ -42,6 +42,7 @@ body {
   color: rgb(130, 111, 76);
   padding: 0.3rem 1rem;
   border-radius: 10px;
+  transition: 0.5s;
 }
 .weather-card:hover .info-card {
   position: absolute;
