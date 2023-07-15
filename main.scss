@@ -33,10 +33,37 @@ body{
     border-radius: 10px;
     box-shadow: 1px 3px 4px #999;
     color: rgb(29, 49, 80);
+    position: relative;
+    .info-card{
+        position: absolute;
+        transform: translateY(-3rem);
+        font-size: 12px;
+        background-color: rgb(255, 238, 207);
+        color:rgb(130, 111, 76) ;
+        padding: .3rem 1rem;
+        border-radius: 10px;
+    }
+    &:hover{
+        .info-card{
+            position: absolute;
+            transform: translateY(-3rem);
+            font-size: 12px;
+            background-color: rgb(255, 238, 207);
+            color:rgb(130, 111, 76) ;
+            padding: .3rem 1rem;
+            width: 230px;
+            text-align: center;
+            border-radius: 10px;
+            opacity: 1 !important;
+        }
+    }
+
+    
     .text-title{
         display: flex;
         h3{
             font-size: 22px;
+            cursor: pointer;
         }
         span{
             font-size: 14px;
