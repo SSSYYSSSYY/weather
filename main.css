@@ -26,7 +26,7 @@ body {
   background-color: white;
   display: flex;
   width: 230px;
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
   padding: 1rem;
   border-radius: 10px;
@@ -60,7 +60,7 @@ body {
   display: flex;
 }
 .weather-card .text-title h3 {
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
 }
 .weather-card .text-title span {
@@ -69,7 +69,7 @@ body {
   margin-left: 0.5rem;
 }
 .weather-card .text-area {
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 .weather-card .icon-area {
   font-size: 40px;

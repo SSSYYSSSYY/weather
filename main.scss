@@ -27,7 +27,7 @@ body{
     background-color: white;
     display: flex;
     width: 230px;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
     padding: 1rem;
     border-radius: 10px;
@@ -63,19 +63,17 @@ body{
     .text-title{
         display: flex;
         h3{
-            font-size: 22px;
+            font-size: 20px;
             cursor: pointer;
         }
         span{
             font-size: 14px;
             align-self:flex-end;
             margin-left:.5rem;
-
-
         }
     }
     .text-area{
-        margin-right: 2rem;
+        margin-right: 1rem;
     }
     .icon-area{
         font-size: 40px;

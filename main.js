@@ -18,7 +18,7 @@ const locationIndexArr = [5, 4, 13, 11, 9, 6, 15, 17];
 let PoPArr = [];//降雨機率
 let CIArr = [];//舒適度
 
-const fetchData = () => fetch("https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-D152C3EB-4FD1-4CFB-9DFE-2211DA455FBE")
+const fetchData = () => fetch("https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWA-17A3E8A1-892B-4403-8A8E-E231880BD3CF")
     .then(res => res.json())
     .then(data =>{
         console.log(data);
@@ -52,14 +52,18 @@ const fetchData = () => fetch("https://opendata.cwb.gov.tw/api/v1/rest/datastore
                 icons[index].innerHTML = `<i class="fa-solid fa-cloud-sun"></i>`
             }
 
-            if(data.records.location[item].weatherElement[0].time[selectedTime].parameter.parameterName == "多雲"){
+            if(data.records.location[item].weatherElement[0].time[selectedTime].parameter.parameterName == "多雲"||
+            data.records.location[item].weatherElement[0].time[selectedTime].parameter.parameterName == "多雲時陰"
+            ){
                 icons[index].innerHTML = `<i class="fa-solid fa-cloud"></i>`
             }
             if(data.records.location[item].weatherElement[0].time[selectedTime].parameter.parameterName == "多雲午後短暫雷陣雨"){
                 icons[index].innerHTML = `<i class="fa-solid fa-cloud-bolt"></i>`
             }
             if(data.records.location[item].weatherElement[0].time[selectedTime].parameter.parameterName == "多雲短暫陣雨"||
-            data.records.location[item].weatherElement[0].time[selectedTime].parameter.parameterName == "多雲午後短暫陣雨"){
+            data.records.location[item].weatherElement[0].time[selectedTime].parameter.parameterName == "多雲午後短暫陣雨"||
+            data.records.location[item].weatherElement[0].time[selectedTime].parameter.parameterName.includes("陣雨或雷雨")
+            ){
                 icons[index].innerHTML = `<i class="fa-solid fa-cloud-showers-heavy"></i>`
             }
             if(data.records.location[item].weatherElement[0].time[selectedTime].parameter.parameterName == "晴午後短暫雷陣雨"){
@@ -85,9 +89,7 @@ times.addEventListener("change", (e) => {
 });
 
 
-// const locationIndexArr = [5, 4, 13, 11, 9, 6, 15, 17];
-//台北市5 新竹市4 桃園市13 台中市11 雲林9 台南6 高雄15 屏東17
-
+//滑鼠移上來顯示降雨機率和舒適度
 weatherCards.forEach((card, index) =>{
     card.addEventListener("mouseenter", (e) =>{
         let info = document.createElement("div");
